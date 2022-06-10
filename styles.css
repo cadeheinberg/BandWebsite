@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+@font-face{
+    /* loading in a custom font from local machine
+    font-family is what we want to refer to it as in our css usage, 
+    it can be anything I think? */
+    font-family: "Raiders";
+    src: url("Fonts/Raiders.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    /* border box makes it so the padding is included inside of the width
+    so it doesnt add to the width.
+    before: 200 width + 20 padding = 240
+    after: 200 width + 20 padding = 200 on the inside!*/
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #777;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 249, 249);
+}
+
+.main-header{
+    background-color: rgba(179, 0, 255, 0.294);
+    background-image: url("images/footer_background.png");
+    opacity: 0.75;
+    /*blend mode multiply combines the two background settings */
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 20px;
+    border-bottom: solid;
+    border-color: rgb(217, 152, 152);
+}
+
+.navigation ul {
+    margin: 0;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation a{
+    /* inline block allows you to add padding and height to top and bottom of inline element
+    that you normally cant do with just inline */
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.navigation a:hover{
+    background-color: rgb(128, 128, 128);
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(241, 169, 169, 0.326);
+}
+
+.main-nav li{
+    /* 0 padding on top, 5% on left and right */
+    padding: 0 5%;
+}
+
+p{
+    margin-bottom: 0;
+    margin-top: .4em;
+}
+
+.content-section{
+    margin: 1em;
+}
+
+.content-sections-container{
+    max-width: 900px;
+    /* 0 margin on top and bottom, auto margin on left and right keeps it centered */
+    margin: 0 auto;
+    padding: 1.5em;
+}
+
+.band-members-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.band-members-container section{
+    max-width: 45%;
+    width: 45%;
+    min-width: 45%;
+    flex-grow: 1;
+}
+
+.section-header{
+    font-family: "Raiders";
+    font-weight: normal;
+    color: rgb(83, 82, 82);
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(144, 144, 144, 0.205);
+    opacity: 0.75;
+    padding: 0.35em 0;
+    border-radius: 0.2em;
+}
+
+.about-band-image, .band-member-image{
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin-right: 15px;
+}
+
+.main-footer{
+    background-color: rgba(241, 5, 233, 0.575);
+    opacity: .75;
+    background-image: url("images/footer_background.png");
+    /*blend mode multiply combines the two background settings */
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: white;
+    padding: .25em 0;
+    height: 5em;
+    border-top: solid;
+    border-color: rgb(217, 152, 152);
+}
+
+.main-footer-container{
+    display: flex;
+    /* centers items vertically inside the flex blox */
+    align-items: center;
+    height: 5em;
+}
+
+.main-footer-container ul{
+    flex-grow: 1;
+    /* makes the ul items go to right side instead of left */
+    text-align: end;
+}
+
+.band-name{
+    text-align: center;
+    margin: 0;
+    font-size: 1.5em;
+    font-family: "Raiders";
+    /* h1 headers automatically put bold so remove it */
+    font-weight: normal;
+    color: white;
+}
+
+.band-name-large{
+    font-size: 3em;
+    margin-top: .25em;
+}
+
+.footer-nav li{
+    padding: 0 .5em;
+}
+
+.footer-nav img{
+    width: 30px;
+    height: 30px;
+}
+
+/* Small screens */
+@media only screen and (max-width: 710px) {
+    .band-members-container section{
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+        flex-grow: 1;
+    }
+}
