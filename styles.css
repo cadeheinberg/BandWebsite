@@ -29,7 +29,7 @@ html, body{
 
 .main-header{
     background-color: rgba(179, 0, 255, 0.294);
-    background-image: url("images/footer_background.png");
+    background-image: url("Images/footer_background.png");
     opacity: 0.75;
     /*blend mode multiply combines the two background settings */
     background-blend-mode: multiply;
@@ -122,7 +122,7 @@ p{
 .main-footer{
     background-color: rgba(241, 5, 233, 0.575);
     opacity: .75;
-    background-image: url("images/footer_background.png");
+    background-image: url("Images/footer_background.png");
     /*blend mode multiply combines the two background settings */
     background-blend-mode: multiply;
     background-size: cover;
