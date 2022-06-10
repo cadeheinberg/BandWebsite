@@ -94,9 +94,9 @@ p{
 }
 
 .band-members-container section{
-    max-width: 45%;
-    width: 45%;
-    min-width: 45%;
+    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
     flex-grow: 1;
 }
 
@@ -122,7 +122,7 @@ p{
 .main-footer{
     background-color: rgba(241, 5, 233, 0.575);
     opacity: .75;
-    background-image: url("Images/footer_background.png");
+    background-image: url("mages/footer_background.png");
     /*blend mode multiply combines the two background settings */
     background-blend-mode: multiply;
     background-size: cover;
@@ -168,14 +168,4 @@ p{
 .footer-nav img{
     width: 30px;
     height: 30px;
-}
-
-/* Small screens */
-@media only screen and (max-width: 710px) {
-    .band-members-container section{
-        max-width: 100%;
-        width: 100%;
-        min-width: 100%;
-        flex-grow: 1;
-    }
 }
