@@ -84,7 +84,8 @@ p {
 }
 
 .content-sections-container {
-    max-width: 900px;
+    max-width: 800px;
+    min-width: 375px;
     /* 0 margin on top and bottom, auto margin on left and right keeps it centered */
     margin: 0 auto;
     padding: 1.5em;
