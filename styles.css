@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-@font-face{
+@font-face {
     /* loading in a custom font from local machine
     font-family is what we want to refer to it as in our css usage, 
     it can be anything I think? */
@@ -11,7 +11,7 @@
     font-style: normal;
 }
 
-*{
+* {
     /* border box makes it so the padding is included inside of the width
     so it doesnt add to the width.
     before: 200 width + 20 padding = 240
@@ -21,13 +21,14 @@
     color: #777;
 }
 
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(255, 249, 249);
 }
 
-.main-header{
+.main-header {
     background-color: rgba(179, 0, 255, 0.294);
     background-image: url("Images/footer_background.png");
     opacity: 0.75;
@@ -47,7 +48,7 @@ html, body{
     display: inline;
 }
 
-.navigation a{
+.navigation a {
     /* inline block allows you to add padding and height to top and bottom of inline element
     that you normally cant do with just inline */
     display: inline-block;
@@ -56,70 +57,57 @@ html, body{
     text-decoration: none;
 }
 
-.navigation a:hover{
-    background-color: rgb(128, 128, 128);
+.navigation a:hover {
+    background-color: rgba(192, 192, 192, 0.256);
+    border-radius: 10%;
 }
 
-.main-nav{
+.main-nav {
     text-align: center;
     font-size: 1.1em;
     font-weight: lighter;
     border-bottom: 1px solid rgba(241, 169, 169, 0.326);
 }
 
-.main-nav li{
+.main-nav li {
     /* 0 padding on top, 5% on left and right */
     padding: 0 5%;
 }
 
-p{
+p {
     margin-bottom: 0;
     margin-top: .4em;
 }
 
-.content-section{
+.content-section {
     margin: 1em;
 }
 
-.content-sections-container{
+.content-sections-container {
     max-width: 900px;
     /* 0 margin on top and bottom, auto margin on left and right keeps it centered */
     margin: 0 auto;
     padding: 1.5em;
 }
 
-.band-members-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.band-members-container section{
-    max-width: 100%;
-    width: 100%;
-    min-width: 100%;
-    flex-grow: 1;
-}
-
-.section-header{
+.section-header {
     font-family: "Raiders";
     font-weight: normal;
     color: rgb(83, 82, 82);
     text-align: center;
     font-size: 2em;
-    background-color: rgba(144, 144, 144, 0.205);
-    opacity: 0.75;
-    padding: 0.35em 0;
-    border-radius: 0.2em;
 }
 
-.about-band-image, .band-member-image{
+.about-band-image,
+.band-member-image {
     float: left;
-    height: 200px;
     width: 200px;
+    height: auto;
     margin-right: 15px;
+    min-width: 200px;
 }
 
-.main-footer{
+.main-footer {
     background-color: rgba(241, 5, 233, 0.575);
     opacity: .75;
     background-image: url("Images/footer_background.png");
@@ -133,20 +121,20 @@ p{
     border-color: rgb(217, 152, 152);
 }
 
-.main-footer-container{
+.main-footer-container {
     display: flex;
     /* centers items vertically inside the flex blox */
     align-items: center;
     height: 5em;
 }
 
-.main-footer-container ul{
+.main-footer-container ul {
     flex-grow: 1;
     /* makes the ul items go to right side instead of left */
     text-align: end;
 }
 
-.band-name{
+.band-name {
     text-align: center;
     margin: 0;
     font-size: 1.5em;
@@ -156,16 +144,112 @@ p{
     color: white;
 }
 
-.band-name-large{
+.band-name-large {
     font-size: 3em;
     margin-top: .25em;
 }
 
-.footer-nav li{
+.footer-nav li {
     padding: 0 .5em;
 }
 
-.footer-nav img{
+.footer-nav img {
     width: 30px;
     height: 30px;
+}
+
+.header-btns {
+    display: flex;
+    justify-content: center;
+    padding: 0.75em 0 0.75em 0;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+    margin: 0 0.75em;
+}
+
+.fire-btn {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🔥</text></svg>") 16 0, auto;
+    /*!emojicursor.app*/
+}
+
+.rainbow-btn {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🌈</text></svg>") 16 0, auto;
+    /*!emojicursor.app*/
+}
+
+.btn-header {
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.463);
+    background-color: rgba(255, 255, 255, 0.151);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, 0.462);
+}
+
+.btn-smiley {
+    /*
+    display: block;
+    margin: 0 auto;
+    */
+    font-size: 1.5em;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border-bottom: none;
+}
+
+.tour-item{
+    /* change to inline-block so you can change width, see tour-date */
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date{
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+}
+
+.tour-city{
+    width: 24%;
+}
+
+.tour-arena{
+    width: 42%;
+}
+
+.tour-btn{
+    max-width: 19%;
+}
+
+.btn-primary{
+    color: white;
+    background-color: rgba(247, 60, 60, 0.634);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    padding: .5em;
+}
+
+.btn-primary:hover{
+    background-color: rgba(181, 45, 45, 0.634);
 }
