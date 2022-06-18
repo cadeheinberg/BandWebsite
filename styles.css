@@ -38,6 +38,7 @@ body {
     padding-bottom: 20px;
     border-bottom: solid;
     border-color: rgb(217, 152, 152);
+    min-width: 375px;
 }
 
 .navigation ul {
@@ -120,6 +121,7 @@ p {
     height: 5em;
     border-top: solid;
     border-color: rgb(217, 152, 152);
+    min-width: 375px;
 }
 
 .main-footer-container {
@@ -133,6 +135,7 @@ p {
     flex-grow: 1;
     /* makes the ul items go to right side instead of left */
     text-align: end;
+    padding-right: 1em;
 }
 
 .band-name {
@@ -150,13 +153,17 @@ p {
     margin-top: .25em;
 }
 
+.footer-name{
+    padding-left: .75em;
+}
+
 .footer-nav li {
     padding: 0 .5em;
 }
 
 .footer-nav img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: auto;
 }
 
 .header-btns {
@@ -390,3 +397,83 @@ p {
     margin: 40px auto 80px auto;
     font-size: 1.75em;
 }
+
+/* Mobile Devices */
+@media only screen and (max-width: 500px) {
+    .band-name-large {
+        font-size: 2.4em;
+        margin-top: .25em;
+    }
+
+    .content-section {
+        margin: 1em;
+        font-size: 1.3em;
+        margin-bottom: 3em;
+    }
+    
+    .content-sections-container {
+        max-width: 800px;
+        min-width: 375px;
+        /* 0 margin on top and bottom, auto margin on left and right keeps it centered */
+        margin: 0 auto;
+        padding: .5em;
+    }
+
+    .about-band-image,
+    .band-member-image {
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.section-header {
+    font-family: "Raiders";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.main-footer {
+    background-color: rgba(241, 5, 233, 0.575);
+    opacity: .75;
+    background-image: url("Images/footer_background.png");
+    /*blend mode multiply combines the two background settings */
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: white;
+    padding: .25em 0;
+    height: 5em;
+    border-top: solid;
+    border-color: rgb(217, 152, 152);
+}
+
+.main-footer-container {
+    display: flex;
+    /* centers items vertically inside the flex blox */
+    align-items: center;
+    height: 5em;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    /* makes the ul items go to right side instead of left */
+    text-align: end;
+    padding: 0;
+    padding-right: 1em;
+}
+
+.footer-nav li {
+    padding: 0;
+}
+
+.footer-nav img {
+    width: 25px;
+    height: auto;
+}
+
+.footer-name{
+    padding-left: .3em;
+}
+
+  }
